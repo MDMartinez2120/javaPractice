@@ -26,18 +26,25 @@ public class Solutions {
       }
     }
 ///////////////////////////////////////////////////////////////////
-  public static boolean feast(String beast, String dish) {
-    String bFirstLetter = beast.chartAt(0);
-    String bLastLetter = beast.chartAt(beast.length() -1);
-
-    String dFirstLetter = dish.chartAt(0);
-    String dLastLetter = dish.chartAt(dish.length() -1);
-
-    if (bFirstLetter && bLastLetter == dFirstLetter && dLastLetter){
-      return true;
-    }
+public class TotalPoints {
+  
+  public static int points(String[] games) {
+    int totalPoints = 0;
+    
+    for (String item:games){
+      int x = (int) item.charAt(0);
+      int y = (int) item.charAt(2);
       
+      if (x > y){
+        totalPoints += 3;
+      }else if (x == y){
+        totalPoints++;
+      }
+    }
+    return totalPoints;
   }
+}
+///////////////////////////////////////////////////////////////////
 
   
 ///////////////////////////////////////////////////////////////////
